@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Controller Example</title>
+</head>
+<body ng-app="myApp">
+<div ng-controller="myAppCtrl">
+	{{obj.firstName}} &nbsp; {{obj.lastName}}
+	<button ng-click="clickMe()">Click Me !!! </button>
+	<img ng-src="{{slides.image}}" style="margin:auto;">
+	<img ng-src="{{slides[0].image}}" style="margin:auto;">
+	{{slides[0]}}
+	<div ng-repeat="slide in slides">
+	   <img ng-src="{{slide.image}}" style="margin:auto;">
+	   <p>{{slide.text}}</p>
+	</div>
+</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"> </script>
+
+<script>
+	angular
+		.module("myApp",[])
+		.controller("myAppCtrl",function($scope){
+			$scope.msg = " Hi";
+			$scope.obj = {firstName : "Rsm", lastName : "kk"};
+
+			$scope.slides= [
+								{ image :"/images/img1.jpg" ,text :"hi"},
+								{ image :"/images/images.jpg" ,text :"hi"},
+								{ image :"/images/images3.jpg" ,text :"hi"}
+							];
+
+			$scope.clickMe = function(){
+				console.log("Msg: " + $scope.msg);
+			}
+		});
+</script>
+</body>
+</html>

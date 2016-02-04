@@ -1,0 +1,108 @@
+<h1>Contact US</h1>
+<div class="container">
+	<div class="row">
+	  <div class="col-sm-6">
+	    <div class="container">
+		 <div class="row">
+		  <h3>Locations:</h3>
+			<div class="col-sm-3">
+			 <h4> USA LOCATION</h4>
+			 <h5> California</h5>
+			 <address>
+			 	42808, Christy Street,101 <br>
+				Fremont, CA 94538, <br>
+				United States <br>
+				US Staffing: +1-510-744-1700<br>
+				Software Dev: +1-510-681-4444<br>
+			 </address>
+			 <h5> New Jersey</h5>
+			 <address>
+			 	100 Wood Ave S, <br>
+				Ste #121, Iselin, NJ 08830 <br>
+				United States <br>
+				Phone:+1-732-592-3333 <br>
+			 </address>
+			</div>
+			 <div class="col-sm-3">
+			 <h4> INDIA LOCATION</h4>
+			 <address>
+			 	SCO 398, Top Floor, <br>
+				Sector 20, Panchkula<br>
+				India<br>
+				Phone: +91-172-4677163<br>
+			 </address>
+			 <h4>CUSTOMER SUPPORT</h4>
+			 reachus[at]betasoftsystems.com
+			</div>
+		</div>
+	   </div>
+	  </div>
+		<div class="col-sm-6">
+		<form name="contactForm" novalidate class="form-horizontal">
+			<div class="form-group">
+				<label for ="name" class="col-sm-3 control-label">Name :</label>
+			<div class="col-sm-6">
+		       <input type ="text" class="form-control" placeholder="Name" 
+		       ng-model="contactForm.name" ng-required="true" min-length="5" max-length="25">
+		     </div>   
+		     <div class="help-block col-sm-3" ng-messages="contactForm.name.$error">
+		     	<div ng-messages-include="views/messages.html"></div>
+		     </div>
+			</div>
+
+			<div class="form-group">
+				<label for ="email" class="col-sm-3 control-label">Email :</label>
+			<div class="col-sm-6">
+				<input type="email" class="form-control" placeholder="Email" 
+				ng-model="contactForm.email"  ng-required="true">
+			</div>
+			<div class="help-block col-sm-3" ng-messages="contactForm.email.$error">
+				<div ng-messages-include="views/messages.html">
+			</div>
+			</div>
+			 </div>
+
+			<div class="form-group">
+			<label for="contact" class="control-label col-sm-3">Contact# :</label>
+			
+			<div class="col-sm-6">
+			 <input type="tel" class="form-control" placeholder="Contact Number" ng-model="contactForm.contact">
+			</div>
+			<div class="help-block col-sm-3" ng-messages="contactForm.contact.$error">
+				<div ng-messages-include="views/messages.html"></div>
+
+			</div>
+			</div>
+			<div class="form-group">
+			<label for="company" class="control-label col-sm-3">Company :</label>
+			
+			<div class="col-sm-6">
+			 <input type="tel" class="form-control" placeholder="Company name" ng-model="contactForm.company">
+			</div>
+			<div class="help-block col-sm-3" ng-messages="contactForm.company.$error">
+				<div ng-messages-include="views/messages.html"></div>
+
+			</div>
+			</div>
+			<div class="form-group">
+			<label for="message" class="control-label col-sm-3">Message :</label>
+			
+			<div class="col-sm-6">
+			 <textarea class="form-control" placeholder="Message" ng-model="contactForm.message"> </textarea>
+			</div>
+			<div class="help-block col-sm-3" ng-messages="contactForm.message.$error">
+				<div ng-messages-include="views/messages.html"></div>
+			</div>
+			</div>
+			<div class="form-group">   
+			<div class="control-label col-sm-6">
+      		  <button type="submit" class="btn btn-default">Send</button>
+       		</div>
+       		<div class="control-label col-sm-2">
+      		  <button type="reset" class="btn btn-default">Reset</button>
+       		</div>
+       		</div>     
+		</form>
+	</div>
+	</div>
+</div>
